@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,15 +7,9 @@
     <title>{{ $pageTitle }}</title>
     @vite('resources/sass/app.scss')
 </head>
-
 <body>
-    @extends('layouts.app')
-
-    @section('content')
-        @include('default')
-    @endsection
-
+    @include('layouts.nav')
+    @yield('content')
     @vite('resources/js/app.js')
 </body>
-
 </html>
